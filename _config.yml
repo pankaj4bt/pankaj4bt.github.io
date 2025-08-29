@@ -3,7 +3,7 @@
 # This config file is meant for settings that affect your entire site, values
 # which you are expected to set up once and rarely need to edit after that.
 # For technical reasons, this file is *NOT* reloaded automatically when you use
-# `jekyll serve -l -H localhost`. If you change this file, please restart the 
+# `jekyll serve -l -H localhost`. If you change this file, please restart the
 # server process.
 
 # Basic Site Settings
@@ -23,12 +23,12 @@ author:
   # Biographic information
   avatar           : "profile.png"
   name             : "Pankaj Ahluwalia"
-  pronouns         : # example: "she/her"  
+  pronouns         : # example: "she/her"
   bio              : "Postdoctoral Fellow"
   location         : "USA"
   employer         : "Augusta University"
   uri              : # URL
-  email            : "pahluwalia@augusta.edu" 
+  email            : "pahluwalia@augusta.edu"
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
@@ -44,8 +44,8 @@ author:
   codepen          : # Username
   dribbble         : # Username
   github           : "pankaj4bt"
-  kaggle           : # Username  
-  stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
+  kaggle           : # Username
+  stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")
 
   # Social media
   bluesky          : "bsky.app" # Replace this with you Bluesky username
@@ -78,7 +78,7 @@ publication_category:
   books:
     title: 'Books'
   manuscripts:
-    title: 'Peer-Reviewed Articles'    
+    title: 'Peer-Reviewed Articles'
   conferences:
     title: 'Conference Papers'
 
@@ -300,6 +300,9 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-redirect-from
+
+# Disable GitHub metadata to avoid API warnings
+github: [metadata]
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate
@@ -342,5 +345,20 @@ tag_archive:
 # - http://jch.penibelst.de/
 compress_html:
   clippings: all
+  comments: all
+  endings: all
+  startings: [html, head, body]
+  blanklines: false
+  profile: false
   ignore:
     envs: development
+
+# Performance optimizations
+future: false
+show_drafts: false
+limit_posts: 0
+highlighter_pages: true
+
+# Build settings
+incremental: true
+profile: false
